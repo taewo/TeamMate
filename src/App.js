@@ -9,7 +9,7 @@ export default class App extends React.Component {
 	            <h1>This is HOT!!!!!</h1>
 	            <h2><Link to='/'>Landing 이동!!!</Link></h2>
 		        <h2><Link to='/test1'>LogIn!!</Link></h2>
-		        <h2><Link to='/test2'>MYDress</Link></h2>
+		        <h2><Link to='/test2'>@@MYDress</Link></h2>
 	        </div>
         )
     }

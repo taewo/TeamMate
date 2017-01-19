@@ -8,8 +8,6 @@ import Test3 from './Test3';
 import Layout from './Layout';
 
 
-
- 
 let rootElement = document.getElementById('root');
  
 ReactDOM.render((

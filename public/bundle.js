@@ -26621,7 +26621,7 @@
 	          _react2.default.createElement(
 	            _reactRouter.Link,
 	            { to: '/test2' },
-	            'MYDress'
+	            '@@MYDress'
 	          )
 	        )
 	      );
@@ -26672,7 +26672,7 @@
 	            return _react2.default.createElement(
 	                'h1',
 	                null,
-	                'This is Test1!!!!!'
+	                'This is Test1!!@@!!!'
 	            );
 	        }
 	    }]);

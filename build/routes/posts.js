@@ -12,6 +12,10 @@ var _path = require('path');
 
 var _path2 = _interopRequireDefault(_path);
 
+var _auth = require('./api/auth');
+
+var _auth2 = _interopRequireDefault(_auth);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var router = _express2.default.Router();
@@ -21,15 +25,10 @@ router.get('/dd', function (req, res) {
 	res.send('posts!!!');
 });
 
-// router.get('/test1', (req, res) => {
-// 	res.send('fuck!');
-// })
-
-// router.get('/read/:id', (req, res) => {
-// 	res.send('You are reading post ' + req.params.id);
-// });
+router.use('/auth', _auth2.default);
 
 router.get('*', function (req, res) {
+	console.log('req.path', req.path);
 	res.sendFile(_path2.default.resolve(__dirname, './../../public/index.html'));
 });
 

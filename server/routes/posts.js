@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'path';
+import auth from './api/auth';
 
 const router = express.Router();
 
@@ -8,15 +9,10 @@ router.get('/dd', (req, res) => {
 	res.send('posts!!!');
 });
 
-// router.get('/test1', (req, res) => {
-// 	res.send('fuck!');
-// })
-
-// router.get('/read/:id', (req, res) => {
-// 	res.send('You are reading post ' + req.params.id);
-// });
+router.use('/auth', auth);
 
 router.get('*', function(req, res) {
+	console.log('req.path',req.path);
 	res.sendFile(path.resolve(__dirname, './../../public/index.html'));
 })
 

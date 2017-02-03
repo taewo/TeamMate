@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken')
 const User = require('../../../../models/user');
 
 /*
@@ -193,6 +193,29 @@ exports.check = (req, res) => {
     // process the promise
     p.then(respond).catch(onError)
 }
+
+/*
+	GET  	/api/auth/check
+*/
+
+exports.check = (req, res) => {
+	res.json({
+		success:true,
+		info: req.decoded
+	})
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

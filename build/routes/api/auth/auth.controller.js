@@ -183,3 +183,14 @@ exports.check = function (req, res) {
     // process the promise
     p.then(respond).catch(onError);
 };
+
+/*
+	GET  	/api/auth/check
+*/
+
+exports.check = function (req, res) {
+    res.json({
+        success: true,
+        info: req.decoded
+    });
+};

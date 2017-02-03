@@ -5,8 +5,8 @@ module.exports = {
     entry: [
         './src/index.js',
         'webpack-dev-server/client?http://0.0.0.0:3001',
-        'webpack/hot/only-dev-server',
-        './src/style.css'
+        'webpack/hot/only-dev-server'
+        // './src/style.css'
     ],
  
     output: {
@@ -40,6 +40,10 @@ module.exports = {
                     presets: ['es2015', 'react']
                 })],
                 exclude: /node_modules/,
+            },
+            {
+              test: /\.css$/,
+              loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
             }
         ]
     }
